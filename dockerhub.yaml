@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: my-namespace
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: my-namespace
+  project: default
+  source:
+    repoURL: 'https://github.com/your-repo/your-app.git'
+    path: path/to/your/app
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  plugin:
+    name: 'helm'
+    env:
+      - name: HELM_EXPERIMENTAL_OCI
+        value: '1'
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: my-namespace
+
