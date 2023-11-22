@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1
 kind: Application
 metadata:
   name: my-app
-  namespace: my-namespace
+  namespace: argocd
 spec:
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: my-namespace
+    namespace: argocd
   project: default
   source:
     repoURL: 'https://github.com/your-repo/your-app.git'
@@ -23,5 +23,5 @@ spec:
         value: '1'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: my-namespace
+    namespace: argocd
 
