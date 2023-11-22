@@ -1,4 +1,4 @@
-iapiVersion: argoproj.io/v1
+apiVersion: argoproj.io/v1
 kind: Application
 metadata:
   name: my-app
