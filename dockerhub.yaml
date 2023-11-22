@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: my-app
@@ -9,7 +9,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    repoURL: 'https://github.com/your-repo/your-app.git'
+    repoURL: 'https://github.com/grvsobha/microservices-demo.git'
     path: path/to/your/app
     targetRevision: HEAD
   syncPolicy:
