@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+iapiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: my-app
@@ -12,16 +12,11 @@ spec:
     repoURL: 'https://github.com/grvsobha/microservices-demo.git'
     path: path/to/your/app
     targetRevision: HEAD
+    helm:
+      valueFiles:
+        - values.yaml
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-  plugin:
-    name: 'helm'
-    env:
-      - name: HELM_EXPERIMENTAL_OCI
-        value: '1'
-  destination:
-    server: 'https://kubernetes.default.svc'
-    namespace: argocd
 
