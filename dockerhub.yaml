@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/grvsobha/microservices-demo.git'
-    path: path/to/your/app
+    path: path
     targetRevision: HEAD
     helm:
       valueFiles:
