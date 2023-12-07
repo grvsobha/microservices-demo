@@ -9,7 +9,7 @@ spec:
     namespace: default
   project: default
   source:
-    repoURL: <YOUR_GIT_REPO_URL>
+    repoURL: 'https://github.com/grvsobha/microservices-demo.git'
     path: manifests
     targetRevision: HEAD
   syncPolicy:
