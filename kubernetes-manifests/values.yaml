@@ -1,0 +1,3 @@
+image:
+  repository: hub.docker.com/z12bosbh/my-app
+  tag: latest
