@@ -10,7 +10,12 @@ spec:
   project: default
   source:
     repoURL: 'https://github.com/grvsobha/microservices-demo.git'
-    path: manifests
+    path: kubernetes-manifests
     targetRevision: HEAD
   syncPolicy:
     automated: {}
+   # Define the application parameters
+  sourceType: Helm
+  helm:
+    valueFiles:
+      - values.yaml
