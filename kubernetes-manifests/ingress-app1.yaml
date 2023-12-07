@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-app1
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: default
+  project: default
+  source:
+    repoURL: <YOUR_GIT_REPO_URL>
+    path: manifests
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
