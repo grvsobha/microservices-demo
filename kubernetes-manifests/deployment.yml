@@ -19,7 +19,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: secret2
+  name: secret
 type: opaque
 data:
   username: ejEyYnNvYmg=
