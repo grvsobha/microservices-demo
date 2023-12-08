@@ -15,3 +15,12 @@ spec:
       containers:
       - name: myc1
         image: docker.io/z12bsobh/nginx:latest
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: secret2
+type: opaque
+data:
+  username: ejEyYnNvYmg=
+  password: bmFubmEjOTAw
